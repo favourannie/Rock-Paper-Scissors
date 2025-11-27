@@ -4,20 +4,15 @@
     box-sizing: border-box;
 }
 
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: inherit;
-  background-size: inherit;
-  background-position: inherit;
-  filter: brightness(50%) blur(4px);
-  z-index: -1; /* keeps overlay behind your content */
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url(./minliu.gif);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
-
 
 .game-container {
   width: 40%;
