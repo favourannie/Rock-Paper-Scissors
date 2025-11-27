@@ -56,28 +56,26 @@ function playGame(userChoice) {
   // Update round count
   round++;
   document.getElementById('round-info').textContent = `Round: ${round} / ${totalRounds};`
-
-  // End game if total rounds reached
-  if (round >= totalRounds) {
-    let finalMessage = '';
-    if (userScore > computerScore) {
-      finalMessage = '🏆 You won the match!';
-    } else if (computerScore > userScore) {
-      finalMessage = '💀 You lost the match!';
-    } else {
-      finalMessage = "🤝 It's a tie!";
-    }
-
-    resultElement.textContent = finalMessage;
-
-    // Disable buttons
-    document.querySelectorAll('.choices button').forEach(btn => btn.disabled = true);
-
-     // alternative way to achieve it.
-    // const allButtons = document.getElementsByTagName('button')
-    // Array.from(allButtons).forEach(btn => btn.disabled = true)
-
+if (round >= totalRounds) {
+  let finalMessage = '';
+  if (userScore > computerScore) {
+    finalMessage = '🏆 You won the match!';
+  } else if (computerScore > userScore) {
+    finalMessage = '💀 You lost the match!';
+  } else {
+    finalMessage = "🤝 It's a tie!";
   }
+
+  resultElement.textContent = finalMessage;
+
+  // Disable buttons during final message
+  document.querySelectorAll('.choices button').forEach(btn => btn.disabled = true);
+
+  // Restart game smoothly after 2 seconds
+  setTimeout(() => {
+    resetGame();
+  }, 2000);
+}
 }
 
 function getEmoji(choice) {
