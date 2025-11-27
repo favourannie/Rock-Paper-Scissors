@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="./RPS2.css" />
+</head>
+<body>
+  <div class="game-container">
+    <div class="RPS-Wrapper">
+       <h1>Rock Paper Scissors</h1>
+   </div>
+    <div class="choices">
+  <button onclick="playGame('rock')" class="emoji-btn" title="Rock">✊</button>
+  <button onclick="playGame('paper')" class="emoji-btn" title="Paper">✋</button>
+  <button onclick="playGame('scissors')" class="emoji-btn" title="Scissors">✌</button>
+</div>
+
+      <!-- the newcode added for score board and round -->
+ <div class="scoreboard">
+    <p>🧍 You: <span id="user-score">0</span></p>
+    <p>🤖 Computer: <span id="computer-score">0</span></p>
+    <p id="round-info">Round: 0 / 5</p>
+
+ </div>
+
+
+
+    <div class="results">
+      <p id="user-choice">🧍 You chose: -</p>
+      <p id="computer-choice">🤖 Computer chose: -</p>
+      <p id="result">Result: -</p>
+    </div>
+  </div>
+
+  <script src="./RPS2.js"></script>
+</body>
+</html>
