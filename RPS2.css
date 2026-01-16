@@ -115,3 +115,79 @@ h1 {
   50% { transform: scale(1.1); }
   100% { transform: scale(1); }
 }
+
+/* TABLETS */
+@media (max-width: 768px) {
+  .game-container {
+    width: 70%;
+    height: 70%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .emoji-btn {
+    font-size: 35px;
+    margin: 12px;
+  }
+
+  .RPS-Wrapper {
+    margin-bottom: 15px;
+  }
+}
+
+/* PHONES */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .scoreboard {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .RPS-Wrapper {
+    width: 100%;
+    height: 7vh;
+    margin-bottom: 15px;
+  }
+
+  .game-container {
+    width: 80%;
+    height: 80%;
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .emoji-btn {
+    font-size: 20px;
+    margin: 12px;
+  }
+
+  .scoreboard {
+    gap: 10px;
+    margin: 20px 0;
+    font-size: 12px;
+  }
+
+  .results p {
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: bold;
+    color: black;
+  }
+
+  #result {
+    font-size: 2rem;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+  }
+}
